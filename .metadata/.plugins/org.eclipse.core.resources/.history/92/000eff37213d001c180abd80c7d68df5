@@ -1,0 +1,5 @@
+package com.git.manager.comment;
+
+public class Comment {
+
+}

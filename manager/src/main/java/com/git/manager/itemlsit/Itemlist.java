@@ -1,0 +1,38 @@
+package com.git.manager.itemlsit;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+
+@Entity
+public class Itemlist {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	@Column(columnDefinition = "VARCHAR(1000)")
+	private String memo;
+	
+	// BLOB: binary large object
+	@Column(columnDefinition = "TEXT")
+	private String hostName;
+	private String bidderName;
+	private String cntHave;
+	private String cntWant;
+	private long createdTime;
+	private long crcHave;
+	private long crcWant;
+	private String status;
+
+}

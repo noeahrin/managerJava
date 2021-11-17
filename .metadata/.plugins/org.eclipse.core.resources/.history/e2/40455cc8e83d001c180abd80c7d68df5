@@ -1,0 +1,5 @@
+package com.git.manager.configuration;
+
+public class WebConfiguration {
+
+}
